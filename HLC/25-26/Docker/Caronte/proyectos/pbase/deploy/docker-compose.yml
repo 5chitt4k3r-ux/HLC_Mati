@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: /home/tiamat/devops/HLC/Docker/Caronte
+      dockerfile: ./dockerfiles/base/ubbase
+      # args: #Variables en DFILE para la construcion de la imagen
+        # - USUARIO=pepe
+      container_name: ctpbase
+      environment:
+        - USUARIO=pepen
+        - PASSWORD=pswpepian
+      volumes:
+        - ./logs:/root/logs
+      networks: 
+        netcaronte:
+          ipv4_address: ${IP}
+
+networks:
+  netcaronte:
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}
