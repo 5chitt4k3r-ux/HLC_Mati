@@ -5,17 +5,17 @@ services:
       dockerfile: ./dockerfiles/base/ubbase
       # args: #Variables en DFILE para la construcion de la imagen
         # - USUARIO=pepe
-      container_name: ctpbase
+    container_name: ctpbase
   #   environment:
   #      - USUARIO=pepen
   #     - PASSWORD=pswpepian
-      env_file:
+    env_file:
       - ./.env
-      volumes:
-        - ./logs:/root/logs
-      networks: 
-        netcaronte:
-          ipv4_address: ${IP}
+    volumes:
+      - ./logs:/root/logs
+    networks: 
+      netcaronte:
+        ipv4_address: ${IP}
 
 networks:
   netcaronte:
