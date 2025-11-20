@@ -1,7 +1,6 @@
 services:
   web:
     build:
-      context: /home/tiamat/devops/HLC/Docker/Caronte
       dockerfile: ./dockerfiles/base/ubbase
       # args: #Variables en DFILE para la construcion de la imagen
         # - USUARIO=pepe
