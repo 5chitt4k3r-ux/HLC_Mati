@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-configurar-ssh(){
+configurar-ssh() {
     sed -i 's/#Port 22/Port 2345/' /etc/ssh/sshd_config
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /
     if [ ! -d /home/${USUARIO}/.ssh ]
