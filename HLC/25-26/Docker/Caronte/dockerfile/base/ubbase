@@ -20,8 +20,3 @@ RUN chmod +x /root/admin/start.sh
 # CMD ["tail", "-f", "/dev/null"] 
 
 ENTRYPOINT ["./start.sh"]
-RUN mkdir /var/run/sshd
-EXPOSE 22
-
-RUN mkdir ./common
-COPY ./common/id_ed25519.pub ./common

@@ -6,7 +6,7 @@ configurar-ssh(){
     if [ ! -d /home/${USUARIO}/.ssh ]
     #then
     mkdir /home/${USUARIO}/.ssh
-    cat /root/datos/id_rsa.pub >> /home/${USUARIO}/.ssh/authorized_keys
+    cat /root/base/admin/common/id_rsa.pub >> /home/${USUARIO}/.ssh/authorized_keys
     #fi
     #exec /usr/sbin/bind -D &
 }
