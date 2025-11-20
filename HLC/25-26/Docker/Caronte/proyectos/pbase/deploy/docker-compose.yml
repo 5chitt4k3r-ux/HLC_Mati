@@ -1,7 +1,8 @@
 services:
   web:
     build:
-      dockerfile: ./dockerfiles/base/ubbase
+      context: /home/tiamat/devops/HLC/25-26/Docker/Caronte
+      dockerfile: ./dockerfile/base/ubbase
       # args: #Variables en DFILE para la construcion de la imagen
         # - USUARIO=pepe
     container_name: ctpbase
