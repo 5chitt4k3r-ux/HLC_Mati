@@ -1,0 +1,2 @@
+ARG Autor
+COZPY ./proyectos/${}/deploy/.env .env

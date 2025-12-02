@@ -3,9 +3,10 @@ services:
     build:
       context: /home/tiamat/devops/HLC/25-26/Docker/Caronte
       dockerfile: ./dockerfile/base/ubbase
+    image: tiamatGarcia/ubbase
       # args: #Variables en DFILE para la construcion de la imagen
         # - USUARIO=pepe
-    container_name: ctpbase
+    container_name: ${CONTENEDOR}
   #   environment:
   #      - USUARIO=pepen
   #     - PASSWORD=pswpepian
