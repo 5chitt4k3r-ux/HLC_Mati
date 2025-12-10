@@ -1,0 +1,4 @@
+config_nginx() {
+    nginx
+}
+

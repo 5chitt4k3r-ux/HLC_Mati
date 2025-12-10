@@ -3,7 +3,7 @@
 set -e
 
 source /root/admin/base/usuarios/mainUsuarios.sh
-source /root/admin/base/ssh/mainSSH.sh
+source /root/admin/base/ssh/ssh.sh
 
 main(){
 	touch /root/logs/informe.log

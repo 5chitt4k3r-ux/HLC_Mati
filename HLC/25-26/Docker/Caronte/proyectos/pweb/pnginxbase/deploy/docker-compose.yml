@@ -1,0 +1,24 @@
+services:
+  servidor:
+    build:
+      context: ${CONTEXTO}
+      dockerfile: ./dockerfile/sweb/nginx/Dockerfile
+    image: tiamatGarcia/nginx
+    container_name: ${CONTENEDOR}
+    hostname: ${HOSTNAME}
+    env_file:
+      - ./.env
+    port:
+      - ${PORT_WEB}:80
+    volumes:
+      - ./logs:/root/logs
+    networks: 
+      netcarontewebnginx:
+        ipv4_address: ${IP}
+
+networks:
+  netcaronte:
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}
