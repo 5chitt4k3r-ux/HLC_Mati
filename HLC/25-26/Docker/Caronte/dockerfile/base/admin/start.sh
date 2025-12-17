@@ -1,18 +1,27 @@
 #!/bin/bash
-# Carga las variables de entornos
 set -e
 
-source /root/admin/base/usuarios/mainUsuarios.sh
-source /root/admin/base/ssh/ssh.sh
+source /root/admin/base/usuario/mainuser.sh
+source /root/admin/base/ssh/mainssh.sh
+source /root/admin/base/sudo/mainsudo.sh
 
 main(){
-	touch /root/logs/informe.log
-	newUser
-	configurar_ssh
-	configurar-sudo
-	#Encargada de dejar el contenedor vivo en BG
-	# tail -f /dev/null
-	# Scripts que se encargan de configurar la imgaen/contenedor
+    # Gestión de usuario --> getuser.sh
+    # Gestión del sudo --> getsudo.sh
+    # ...
+    mkdir -p /root/logs
+    touch /root/logs/informe.log
+    newUser
+    resuser=$?
+    if [ "$resuser" -eq 0 ]; then
+        configurar_sudo
+    fi
+    if [ "$resuser" -eq 0 ]; then
+        configurar_ssh
+    fi
+
+    # Encargada de mantener el contenedor en ejecución de Background
+    #tail -f /dev/null   
 }
 
 main

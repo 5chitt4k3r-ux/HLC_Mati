@@ -24,6 +24,6 @@ config_sudoers() {
 }
 
 newSSH() {
-    config_sudoers
-    config_ssh
+  config_sudoers
+  config_ssh
 } 
