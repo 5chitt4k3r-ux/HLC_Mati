@@ -1,0 +1,19 @@
+apiVersions: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webtaller-ingress
+  namespace: ptaller
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: webtaller.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: webtaller-service
+            port:
+              number: 80

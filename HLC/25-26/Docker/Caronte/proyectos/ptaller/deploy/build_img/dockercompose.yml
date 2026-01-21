@@ -1,0 +1,8 @@
+services:
+  webtaller:
+    build: 
+      context: .
+      dockerfile: ./build_img/dockerfile
+    image: matiasgracia/webtaller
+    ports:
+      - "8080:80"
