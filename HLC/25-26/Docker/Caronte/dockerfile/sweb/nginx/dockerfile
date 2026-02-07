@@ -14,6 +14,6 @@ EXPOSE 80
 
 RUN mkdir -p /root/admin/nginx
 COPY ./dockerfile/sweb/nginx/admin /root/admin/nginx
-RUN chmod +x /root/admin/sweb/nginx/start.sh
+RUN chmod +x /root/admin/nginx/start.sh
 WORKDIR /root/admin/nginx
 ENTRYPOINT [ "./start.sh" ]
