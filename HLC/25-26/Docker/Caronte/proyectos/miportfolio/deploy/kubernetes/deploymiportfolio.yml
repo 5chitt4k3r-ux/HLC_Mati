@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miportfolio-deployment
+  namespace: miportfolio
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: miportfolio
+  template:
+    metadata:
+      labels:
+        app: miportfolio
+    spec:
+      containers:
+        - name: miportfolio
+          image: kuklusklan/miportfolio
+          ports:
+            - containerPort: 80
