@@ -14,7 +14,7 @@ main(){
     newUser
     resuser=$?
     if [ "$resuser" -eq 0 ]; then
-        configurar_sudo
+        config_sudoers
     fi
     if [ "$resuser" -eq 0 ]; then
         configurar_ssh
