@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-source /root/admin/base/usuario/mainuser.sh
-source /root/admin/base/ssh/mainssh.sh
-source /root/admin/base/sudo/mainsudo.sh
+source /root/admin/base/usuario/mainUsuario.sh
+source /root/admin/base/ssh/ssh.sh
+source /root/admin/base/sudo/mainSudo.sh
 
 main(){
     # Gestión de usuario --> getuser.sh
