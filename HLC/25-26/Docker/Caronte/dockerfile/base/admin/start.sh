@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-source /root/admin/base/usuario/mainUsuario.sh
+source /root/admin/base/usuario/mainUsuarios.sh
 source /root/admin/base/ssh/ssh.sh
 source /root/admin/base/sudo/mainSudo.sh
 
