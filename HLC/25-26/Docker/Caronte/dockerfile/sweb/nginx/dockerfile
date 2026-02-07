@@ -14,7 +14,6 @@ EXPOSE 80
 
 RUN mkdir -p /root/admin/sweb/nginx
 COPY ./dockerfile/sweb/nginx /root/admin/sweb/nginx
-RUN chmod +x /root/admin/sweb/nginx/start.sh
-RUN mv /var/www/html/index.nginx-debian.html /var/www/html/index.html
+RUN chmod +x /root/admin/sweb/nginx/admin/start.sh
 WORKDIR /root/admin/sweb/nginx
 ENTRYPOINT [ "./admin/start.sh" ]
