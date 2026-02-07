@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-source /root/admin/base/usuario/mainUsuarios.sh
-source /root/admin/base/ssh/ssh.sh
+source /root/admin/base/usuarios/mainUsuarios.sh
+source /root/admin/base/ssh/mainSSH.sh
 source /root/admin/base/sudo/mainSudo.sh
 
 main(){
