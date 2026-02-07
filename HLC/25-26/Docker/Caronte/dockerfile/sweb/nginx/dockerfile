@@ -17,4 +17,4 @@ WORKDIR /root/admin/nginx
 COPY ./dockerfile/sweb/nginx/admin/ .
 RUN chmod +x ./star.sh
 
-ENTRYPOINT [ "./start.sh" ]
+ENTRYPOINT [ "./star.sh" ]
