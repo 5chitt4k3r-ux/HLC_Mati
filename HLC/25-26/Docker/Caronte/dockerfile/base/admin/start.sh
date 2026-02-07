@@ -17,7 +17,7 @@ main(){
         config_sudoers
     fi
     if [ "$resuser" -eq 0 ]; then
-        configurar_ssh
+        config_ssh
     fi
 
     # Encargada de mantener el contenedor en ejecución de Background
