@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "mi-portfolio-con-helm.fullname" . }}:{{ .Values.service.port }}']
+      args: ['{{ include "mi-portfolio-con-helm.fullname" . }}:{{ .Values.app.service.port }}']
   restartPolicy: Never
