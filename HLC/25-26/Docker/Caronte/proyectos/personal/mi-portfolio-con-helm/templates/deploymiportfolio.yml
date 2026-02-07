@@ -1,20 +1,21 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment 
 metadata:
-  name: miportfolio-deployment
-  namespace: miportfoliohelm
+  name: deploy-{{.Values.app.container.name}}
+  namespace: {{.Release.Namespace}}
 spec:
-  replicas: 3
+  replicas: {{.Values.app.container.replicaCount}}
   selector:
     matchLabels:
-      app: miportfolio
+      app: {{.Values.app.name}}
   template:
     metadata:
       labels:
-        app: miportfolio
+        app: {{.Values.app.name}}
     spec:
       containers:
-        - name: miportfolio
-          image: kuklusklan/miportfolio
-          ports:
-            - containerPort: 80
+      - name: {{.Values.app.container.name}}
+        image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
+        imagePullPolicy: {{.Values.app.image.pullPolicy}}
+        ports:
+        - containerPort: {{.Values.app.container.port}}
