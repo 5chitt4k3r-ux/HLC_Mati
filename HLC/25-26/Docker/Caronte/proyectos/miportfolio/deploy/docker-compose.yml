@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: ${CONTEXTO}
+      dockerfile: ./dockerfile/miportfolio/dockerfile
+    image: kuklusklan/miportfolio
+    container_name: ${CONTENEDOR}
+    env_file:
+      - ./.env
+    ports:
+      - ${PORT_WEB}:80
+    volumes:
+      - ./logs:/root/logs
+    networks: 
+      netporfolio:
+        ipv4_address: ${IP}
+
+networks:
+  netporfolio:
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}

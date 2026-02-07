@@ -1,0 +1,14 @@
+FROM kuklusklan/nginx
+
+ARG PROYECTO
+ARG SCRIPT
+USER root
+
+RUN mkdir -p /root/admin/base/portfolio
+WORKDIR /root/admin/base/portfolio
+COPY ./proyectos/miportfolio/portfolio/* /usr/share/nginx/html
+COPY ./proyectos/miportfolio/portfolio/* /var/www/html
+COPY ./dockerfile/miportfolio/admin/ /root/admin/base/portfolio/
+RUN chmod +x /root/admin/base/portfolio/start.sh
+
+ENTRYPOINT [ "./start.sh" ]

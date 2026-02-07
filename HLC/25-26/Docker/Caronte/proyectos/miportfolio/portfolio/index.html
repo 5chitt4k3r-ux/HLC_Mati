@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matias Garcia Martinez | Informático ASIR</title>
+    <meta name="description" content="Portfolio de Matias Garcia Martinez, Técnico Superior en Administración de Sistemas Informáticos en Red (ASIR) recién graduado.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Matias<span class="highlight">.dev</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact" class="btn-contact">Contactar</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <span class="badge">Recién Graduado ASIR</span>
+            <h1>Hola, soy <span class="gradient-text">Matias Garcia</span></h1>
+            <h2>Administrador de Sistemas Informáticos en Red</h2>
+            <p>Especializado en gestión de servidores, redes, virtualización y ciberseguridad. Listo para optimizar infraestructuras TI.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary">Hablemos</a>
+                <a href="#projects" class="btn btn-secondary">Ver Proyectos</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Soy un técnico superior en <strong>Administración de Sistemas Informáticos en Red (ASIR)</strong> recién graduado, apasionado por la tecnología y la infraestructura IT.</p>
+                    <p>Durante mi formación, he adquirido conocimientos sólidos en la administración de sistemas operativos (Windows y Linux), configuración de servicios de red, gestión de bases de datos y seguridad informática. Me caracterizo por ser una persona proactiva, con gran capacidad de resolución de problemas y aprendizaje continuo.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>ASIR</h3>
+                            <p>Título Superior</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>2024</h3>
+                            <p>Graduado</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="window-body">
+                            <code class="language-bash">
+                                <span class="prompt">root@matias:~#</span> whoami<br>
+                                <span class="output">matias_garcia</span><br>
+                                <span class="prompt">root@matias:~#</span> neofetch<br>
+                                <span class="output">OS:</span> Windows Server / Linux Ubuntu<br>
+                                <span class="output">Role:</span> SysAdmin Junior<br>
+                                <span class="output">Skills:</span> Networks, Virtualization, Cloud<br>
+                                <span class="output">Status:</span> Ready to work<br>
+                                <span class="prompt">root@matias:~#</span> _
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-linux"></i>
+                    <h3>Sistemas Operativos</h3>
+                    <p>Administración avanzada de Windows Server (AD, GPO, DNS, DHCP) y Linux (Ubuntu, Debian, CentOS).</p>
+                </div>
+                <div class="fas fa-network-wired icon-placeholder"></div> 
+                <!-- Using font awesome icon classes directly on i tags inside the card is better, fixing next line -->
+                 <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Redes</h3>
+                    <p>Configuración de routers/switches (Cisco), VLANs, VPNs, Firewalls y monitorización de tráfico.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Virtualización</h3>
+                    <p>Despliegue y gestión de máquinas virtuales con VMware vSphere, VirtualBox y contenedores Docker.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Bases de Datos</h3>
+                    <p>Gestión y administración de MySQL, MariaDB y SQL Server. Consultas y copias de seguridad.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Ciberseguridad</h3>
+                    <p>Hacking ético básico, bastionado de sistemas, análisis de vulnerabilidades y seguridad perimetral.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Scripting & Web</h3>
+                    <p>Automatización con Bash y PowerShell. Conocimientos de HTML, CSS, PHP y Python básico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Infraestructura Empresarial Segura</h3>
+                        <p>Diseño e implementación de una red corporativa con DMZ, servidor VPN y políticas de dominio en Windows Server.</p>
+                        <div class="tags">
+                            <span>Windows Server</span>
+                            <span>VPN</span>
+                            <span>Active Directory</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Servidor Web de Alta Disponibilidad</h3>
+                        <p>Despliegue de un clúster de servidores web Apache/Nginx con balanceo de carga y replicación de base de datos.</p>
+                        <div class="tags">
+                            <span>Linux</span>
+                            <span>Apache</span>
+                            <span>Load Balancing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Monitorización con Zabbix/Nagios</h3>
+                        <p>Sistema de monitorización centralizado para alertar sobre caídas de servicio y uso de recursos en tiempo real.</p>
+                        <div class="tags">
+                            <span>Monitoring</span>
+                            <span>SNMP</span>
+                            <span>Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-box">
+                <h2>¿Listo para empezar?</h2>
+                <p>Estoy buscando activamente oportunidades para comenzar mi carrera profesional como Administrador de Sistemas.</p>
+                <div class="contact-links">
+                    <a href="mailto:matias@example.com" class="contact-btn"><i class="fas fa-envelope"></i> Enviar Email</a>
+                    <a href="https://linkedin.com" target="_blank" class="contact-btn outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com" target="_blank" class="contact-btn outline"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Matias Garcia Martinez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
