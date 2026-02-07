@@ -3,7 +3,7 @@ services:
     build:
       context: ${CONTEXTO}
       dockerfile: ./dockerfile/sweb/nginx/Dockerfile
-    image: tiamatGarcia/nginx
+    image: kuklusklan/nginx
     container_name: ${CONTENEDOR}
     hostname: ${HOSTNAME}
     env_file:
