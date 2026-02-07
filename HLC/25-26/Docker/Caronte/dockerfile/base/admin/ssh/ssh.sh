@@ -3,7 +3,7 @@ config_ssh() {
   # 1. Deshabilitar el login de root
   sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
   # 2. Cambiar el puerto de SSH
-  sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
+  sed -i 's/#Port 22/Port '$PORT_SSH'/' /etc/ssh/sshd_config
 
   mkdir -p /home/${USUARIO}/.ssh
     if [ -f /root/admin/base/common/id_rsa.pub ]; then
