@@ -21,7 +21,7 @@ config_ssh() {
 config_sudoers() {
     if [ -f /etc/sudoers ]
     then
-        echo "${USUARIOS} ALL=(ALL:ALL) ALL" >> /etc/sudoers
+        echo "${USUARIO} ALL=(ALL:ALL) ALL" >> /etc/sudoers
     fi
 }
 
