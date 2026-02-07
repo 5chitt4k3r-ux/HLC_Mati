@@ -1,9 +1,7 @@
 FROM kuklusklan/nginx
 
-ARG PROYECTO
-ARG SCRIPT
 USER root
-
+RUN chown -R www-data:www-data /var/www/html
 RUN mkdir -p /root/admin/base/portfolio
 WORKDIR /root/admin/base/portfolio
 COPY ./proyectos/miportfolio/portfolio/* /usr/share/nginx/html
